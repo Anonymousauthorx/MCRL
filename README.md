@@ -14,8 +14,14 @@ python generate_data.py --filename=data/tsp_20 --problem="tsp" --graph_sizes=20 
 CUDA_VISIBLE_DEVICES="0" python -u search.py data/tsp_20.pkl --model=pretrained/tsp_20/epoch-99.pt --beam_size=1 --eval_batch_size=1024
 ```
 ## Dependencies<br>
-Python==3.6 <br>
-NumPy<br>
-PyTorch>=1.4.0<br>
-tqdm<br>
-tensorboard_logger<br>
+Python>=3.6 <br>
+tqdm>=4.36.1 <br>
+torch==1.4.0 <br>
+tensorboardX>=1.9 <br>
+numpy>=1.18.1 <br>
+cvxpy==1.1.0a1 <br>
+scipy==1.4.1<br>
+# Testing
+```
+python eval.py data/tsp/tsp20_test_seed1234.pkl --model pretrained/tsp_20 --decode_strategy 
+```
