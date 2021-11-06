@@ -13,7 +13,7 @@ python generate_data.py --filename=data/tsp_20 --problem="tsp" --graph_sizes=20 
 ```
 CUDA_VISIBLE_DEVICES="0" python -u search.py data/tsp_20.pkl --model=pretrained/tsp_20/epoch-99.pt --beam_size=1 --eval_batch_size=1024
 ```
-##Dependencies
+## Dependencies<br>
 Python==3.6 <br>
 NumPy<br>
 PyTorch>=1.4.0<br>
