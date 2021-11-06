@@ -23,5 +23,13 @@ cvxpy==1.1.0a1 <br>
 scipy==1.4.1<br>
 # Testing
 ```
-python eval.py data/tsp/tsp20_test_seed1234.pkl --model pretrained/tsp_20 --decode_strategy 
+python eval.py data/tsp/tsp20_test_seed1234.pkl --model pretrained/tsp_20 --decode_strategy MCTS
+```
+## If you want to evaluate using our pretrained models, run the following for our supervised learning model:
+```
+python run.py --pass_range 3 --eval --load MCRL/pretrained/il.pb --seed 1
+```
+## then the following to run our reinforcement learning model:
+```
+python train.py --rl --eval --load MCRL/pretrained/rl.pb --seed 1
 ```
